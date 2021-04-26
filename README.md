@@ -1,7 +1,7 @@
  # OverView
 The monkeyrunner tool provides an API for writing programs that control an Android device or emulator from outside of Android code. With monkeyrunner, you can write a Python program that installs an Android application or test package, runs it, sends keystrokes to it, takes screenshots of its user interface, and stores screenshots on the workstation. The monkeyrunner tool is primarily designed to test applications and devices at the functional/framework level and for running unit test suites.
 ## Working environment
-Jdk、Python、Android SDK.  
+*Jdk、*Python、*Android SDK.  
 The aboving enquirements need to be installed firstly.There are lots of instructions available online.
 ## Get the main activity name
 **adb shell pm list packages |grep video**  
@@ -25,9 +25,7 @@ com.cmcc.cmvideo/.splash.SplashActivity filter 83f51a
 It is the launcher activity.
 ## Get the specific location
 monkeryrunner monkey_recorder.py
-Then it will display the main window such as following:
-[enter link description here](D:%5Capp_test%5Cimage%5Cmonkeyrunner.png)
-get the position of some specific location
+Then it will display the main window,From the window We can get the position of some specific location  
 ## writing script
 screenShotPath = 'd:/app_test/image/'  
 now = time.strftime("%Y-%m-%d-%H-%M-%S")  
