@@ -4,21 +4,21 @@ The monkeyrunner tool provides an API for writing programs that control an Andro
 Jdk、Python、Android SDK.  
 The aboving enquirements need to be installed firstly.There are lots of instructions available online.
 ## Get the main activity name
-**adb shell pm list packages |grep video**
-The command gets all the package  containing video.
-**pm list packages|grep video**
-package:com.qiyi.video
-package:com.sohu.sohuvideo.emplayer
-package:com.huawei.videoeditor
-package:com.fengshows.video
-package:com.cmvideo.migumovie
-package:com.huawei.multimedia.hivideoplayengine
-package:com.cmcc.cmvideo
-package:com.ss.android.article.video
-select the test object app.Here I select com.cmcc.cmvideo
+**adb shell pm list packages |grep video**  
+The command gets all the package  containing video.  
+**pm list packages|grep video**  
+package:com.qiyi.video  
+package:com.sohu.sohuvideo.emplayer  
+package:com.huawei.videoeditor  
+package:com.fengshows.video  
+package:com.cmvideo.migumovie  
+package:com.huawei.multimedia.hivideoplayengine  
+package:com.cmcc.cmvideo  
+package:com.ss.android.article.video  
+select the test object app.Here I select com.cmcc.cmvideo  
 Then:
-**adb shell dumpsys com.cmcc.cmvideo**. 
-In the output text,find the text:
+**adb shell dumpsys com.cmcc.cmvideo**.   
+In the output text,find the text:  
 com.cmcc.cmvideo/.splash.SplashActivity filter 83f51a
           Action: "android.intent.action.MAIN"
           Category: "android.intent.category.LAUNCHER"
@@ -78,7 +78,6 @@ print('test complete,tks')
 From command line:
 monkeyrunner  d:\XX\XX\test_scripts.py
 Then the script will begin to work.
-Som problems will occur:
 ### SyntaxError: Non-ASCII Character
 The reason is that we should indicate this in front of monkeyrunner scripts.
 #-*- coding: UTF-8 -*-
