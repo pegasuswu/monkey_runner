@@ -27,8 +27,8 @@ screenShotPath = 'd:/app_test/image/'
 now = time.strftime("%Y_%m_%d_%H_%M_%S")  
 logPath = "d:/app_test/monkeyrunner/"  
 log = open(logPath+"-log-"+now+".txt", "w")  
-print("This is a simple monkeyrunner test script") 
-"""**use adb devices to get the device id**"""
+print("This is a simple monkeyrunner test script")   
+"""**use adb devices to get the device id**"""  
 device = mr.waitForConnection(30, 'AYG5T19328001569')  
 log.write("wait for mobile phone connecting...、\n")  
 device.startActivity(component=' com.cmcc.cmvideo/.splash.SplashActivity')  
